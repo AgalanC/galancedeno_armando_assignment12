@@ -27,3 +27,10 @@ children: 'I am Disabled',
 disabled: true,
 backgroundColor: '#A9A9A9', // Disabled background color
 };
+
+// export const Visible = Template.bind({});
+// Visible.args = {
+// children: 'I am Visible',
+// disabled: false,
+// backgroundColor: '#A9A9A9',
+// };
