@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React, { ReactElement } from 'react';
 import styled from 'styled-components';
 import { ButtonProps } from './Button.types';
 
@@ -13,7 +12,7 @@ const StyledButton = styled.button<ButtonProps & { hoverClass?: string }>`
   color: white;
   transition: background-color 0.3s ease, transform 0.3s ease;
 
-  &.hover {
+  &:hover {
     background-color: ${({ disabled }) => (disabled ? 'grey' : '#0053ba')};
   }
 
@@ -30,8 +29,11 @@ const StyledButton = styled.button<ButtonProps & { hoverClass?: string }>`
   }
 `;
 
-const Button: React.FC<ButtonProps> = ({ children, disabled, backgroundColor, visible = true }) => {
-  if (!visible) return null;
+const Button: React.FC<ButtonProps> = ({ children, disabled, backgroundColor, visible = true }): ReactElement | null => {
+  if (!visible) {
+    return null;
+  }
+
   return <StyledButton disabled={disabled} backgroundColor={backgroundColor}>{children}</StyledButton>;
 };
 

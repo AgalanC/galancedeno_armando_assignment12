@@ -1,9 +1,8 @@
+import { ReactNode } from 'react';
 
-// Button.types.ts
 export interface ButtonProps {
-  children: React.ReactNode;
+  children: ReactNode;
   disabled?: boolean;
   backgroundColor?: string;
-  visible?: boolean; // Add the visible property
+  visible?: boolean;
 }
-
