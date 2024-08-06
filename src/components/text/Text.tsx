@@ -1,7 +1,7 @@
+
 import React from 'react';
 import styled from 'styled-components';
 import { TextProps } from './Text.types';
-
 
 const StyledText = styled.p<TextProps>`
   font-size: 26px;
@@ -17,7 +17,8 @@ const StyledText = styled.p<TextProps>`
   }
 `;
 
-const Text: React.FC<TextProps> = ({ children, disabled, backgroundColor }) => {
+const Text: React.FC<TextProps> = ({ children, disabled, backgroundColor, visible = true }) => {
+  if (!visible) return null;
   return <StyledText disabled={disabled} backgroundColor={backgroundColor}>{children}</StyledText>;
 };
 

@@ -1,5 +1,9 @@
-export interface CustomCardProps {
-  children: React.ReactNode;
+
+export interface CardProps {
+  title: string;
+  description: string;
+  imageUrl: string;
+  visible?: boolean;
   disabled?: boolean;
-  backgroundColor?: string;
 }
+

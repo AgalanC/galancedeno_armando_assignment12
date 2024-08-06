@@ -1,65 +1,65 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Button from './components/Button/button'
-import Label from './components/label/Label'
-import Text from './components/text/Text'
-import Dropdown from './components/dropdown/Dropdown'
-import Card from './components/card/Card'
-
+import { useState } from 'react';
+import './App.css';
+import Dropdown from './components/Dropdown/Dropdown';
+import Card from './components/Card/Card';
+import Label from './components/Label/Label';
+import Button from './components/Button/Button';
+import Text from './components/Text/Text';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+
   const dropdownOptions = [
-    { value: 'mexico', label: 'mexico' },
-    { value: 'nepal', label: 'nepal' },
-    { value: 'canada', label: 'canada' },
-    { value: 'iran', label: 'iran' },
-    { value: 'philippines', label: 'philippines' }
+    { value: 'cms', label: 'CMS Project' },
+    { value: 'portfolio', label: 'Freelancing Portfolio Websites' },
+    { value: 'other', label: 'Other Projects' }
   ];
 
   return (
-    <>
-    <div className="navbar-menu">
+    <div className="App">
+      <nav className="navbar">
+        <div className="navbar-brand">
+          <h2>Saurav Gautam</h2>
+        </div>
+        <div className="navbar-menu">
           <Dropdown options={dropdownOptions} disabled={false} />
         </div>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      </nav>
 
-      {/* Once the line below was added, line 5 was automatically created */}
-      {/* <MyButton></MyButton> */}
+      <section className="hero-section">
+        <h1>Welcome to My Portfolio</h1>
+        <p>I am a Full Stack Web Developer Student, actively learning and improving. Explore my projects below!</p>
+      </section>
 
-      {/* Modified this line after I added line "const MyButton =..." in the "MyButton.tsx" file */}
-      {/* And after I added the "?" in the "MyButton.types.tsx" file */}
-      <p><Text>Hello</Text></p>
-      <p><Card>This is a card</Card></p>
-      <p><Label>Great Canada</Label></p>
-      <p><Button>Submit</Button></p>
-      
-      
-      
-      
-      </>
-  )
+      <section className="portfolio-section">
+        <div className="portfolio-item">
+          <Card disabled={false}>
+            <Text className="portfolio-text">Project 1: CMS Project</Text>
+          </Card>
+        </div>
+        <div className="portfolio-item">
+          <Card disabled={false}>
+            <Text className="portfolio-text">Project 2: Freelancing Portfolio Websites</Text>
+          </Card>
+        </div>
+        <div className="portfolio-item">
+          <Card disabled={false}>
+            <Text className="portfolio-text">Project 3: Other Projects</Text>
+          </Card>
+        </div>
+        <div className="portfolio-item">
+          <Label className="portfolio-label">My Skills</Label>
+          <Button disabled={false} className="portfolio-button">
+            Explore More
+          </Button>
+        </div>
+      </section>
+
+      <footer className="footer">
+        <Text>Designed and developed with ❤️ by Saurav Gautam</Text>
+      </footer>
+    </div>
+  );
 }
 
-export default App
+export default App;
