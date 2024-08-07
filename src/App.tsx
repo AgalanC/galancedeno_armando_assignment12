@@ -19,7 +19,7 @@ function App() {
     <div className="App">
       <nav className="navbar">
         <div className="navbar-brand">
-          <h2>Saurav Gautam</h2>
+          <h2>Armando Galan Cedeno</h2>
         </div>
         <div className="navbar-menu">
           <Dropdown options={dropdownOptions} disabled={false} />
@@ -56,7 +56,7 @@ function App() {
       </section>
 
       <footer className="footer">
-        <Text>Designed and developed with ❤️ by Saurav Gautam</Text>
+        <Text>Designed and developed with ❤️ by Armando Galan </Text>
       </footer>
     </div>
   );
