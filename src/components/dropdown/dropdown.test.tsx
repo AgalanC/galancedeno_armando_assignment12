@@ -25,6 +25,7 @@ describe('Dropdown Logic', () => {
     expect(result).toBe(false);
   });
 
+  
   test('should return false when the option is null', () => {
     const options = ['pizza', 'tacos', 'sushi'];
     const result = isValidOption(options, null as unknown as string);
